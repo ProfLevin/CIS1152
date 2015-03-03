@@ -5,15 +5,17 @@
  */
 function tempWarning($temp_in_c)
 {
-    // Use an if else statement
+	// Use an if else statement
 
-    // Output the following text if the temp_in_c is above 32 degrees centigrade.
+	// Output the following text if the temp_in_c is above 32 degrees centigrade.
+	if($temp_in_c > 32){
+		echo "It's really hot out there, be careful!";
+	}
+	else if($temp_in_c < 7){
+		// Alternately output if the temp_in_c is below 7 degrees centigrade
 
-    echo "It's really hot out there, be careful!";
-
-    // Alternately output if the temp_in_c is below 7 degrees centigrade
-
-    echo "Brrrrr. Be sure to dress warmly.";
+		echo "Brrrrr. Be sure to dress warmly.";
+	}
 }
 
 /**
@@ -23,26 +25,27 @@ function tempWarning($temp_in_c)
  */
 function quadraticEquation($a, $b, $c)
 {
-    // Use and if else statement
+	// Use and if else statement
 
-    $discrim = $b * $b - 4 * $a * $c;
+	$discrim = $b * $b - 4 * $a * $c;
 
-    //if the discrim is less than zero echo the following
+	//if the discrim is less than zero echo the following
+	if($discrim < 0)
+		echo "The equation has no real roots!";
+	elseif($discrim == 0){
+		// if the discrim equals zero do the following
 
-    echo "The equation has no real roots!";
+		$root = -$b / (2 * a);
+		echo "There is a double root at " . $root;
+	}
+	else if($discrim > 0){
+		// if the discrim is greater than zero do the following
 
-    // if the discrim equals zero do the following
-
-    $root = -$b / (2 * a);
-    echo "There is a double root at " . $root;
-
-    // if the discrim is greater than zero do the following
-
-    $discRoot = sqrt($b * $b - 4 * $a * $c);
-    $root1    = (-$b + $discRoot) / (2 * $a);
-    $root2    = (-$b - $discRoot) / (2 * $a);
-    echo "The solutions are: " . $root1 . "and " . $root2;
-
+		$discRoot = sqrt($b * $b - 4 * $a * $c);
+		$root1    = (-$b + $discRoot) / (2 * $a);
+		$root2    = (-$b - $discRoot) / (2 * $a);
+		echo "The solutions are: " . $root1 . "and " . $root2;
+	}
 }
 /**
  * Lab 4, Form and Post Lab
@@ -50,7 +53,7 @@ function quadraticEquation($a, $b, $c)
  * This lab focuses on your understanding of arithmatic.
  *
  * @version 1.0
- * @author YOUR_NAME <YOUR_EMAIL_ADDRESS@vtc.edu>
+ * @author George Walter Colrove IV <gwc02050@vtc.vsc.edu>
  * @since 20150120
  */
 
@@ -59,13 +62,13 @@ function quadraticEquation($a, $b, $c)
  */
 function consinantOrVowel($letter)
 {
-    // Use a switch statement here
+	// Use a switch statement here
 
-    echo $letter . " is a vowel";
+	echo $letter . " is a vowel";
 
-    echo $letter . " is a consonant";
+	echo $letter . " is a consonant";
 
-    echo $letter . " is not a vowel or a consonant";
+	echo $letter . " is not a vowel or a consonant";
 
 }
 
@@ -74,13 +77,16 @@ function consinantOrVowel($letter)
  */
 function oddOrEven($number)
 {
-    // Use the modulus and ternary operator to echo whether the number is odd or even
-
+	// Use the modulus and ternary operator to echo whether the number is odd or even
+	if($number%2 == 0)
+		echo "even";
+	else 
+		echo "odd";
 }
 
 function countByThree()
 {
-    // Create a for loop that counts by threes to ninety-nine and outputs every increment from 3 up to and including ninety-nine
+	// Create a for loop that counts by threes to ninety-nine and outputs every increment from 3 up to and including ninety-nine
 
 }
 
@@ -89,10 +95,11 @@ function countByThree()
  */
 function indefiniteFactorialLoop($count)
 {
-    // write a loop that starts at 0 and calculates the factorial to to and including the value of count
+	// write a loop that starts at 0 and calculates the factorial to to and including the value of count
 
-    echo "The factorial is " . $factorial_product;
+	echo "The factorial is " . $factorial_product;
 
 }
 
 // Insert function calls below.
+tempWarning(100);
