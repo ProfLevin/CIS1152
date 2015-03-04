@@ -1,4 +1,3 @@
-echo 'running'
 git pull
 git add .
 git commit -m "Update on $DATE"
