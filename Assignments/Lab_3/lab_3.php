@@ -35,7 +35,7 @@ function quadraticEquation($a, $b, $c)
 	elseif($discrim == 0){
 		// if the discrim equals zero do the following
 
-		$root = -$b / (2 * a);
+		$root = -$b / (2 * $a);
 		echo "There is a double root at " . $root;
 	}
 	else if($discrim > 0){
@@ -63,12 +63,38 @@ function quadraticEquation($a, $b, $c)
 function consinantOrVowel($letter)
 {
 	// Use a switch statement here
-
-	echo $letter . " is a vowel";
-
-	echo $letter . " is a consonant";
-
-	echo $letter . " is not a vowel or a consonant";
+	switch($letter){
+		case 'a': 
+		case 'e': 
+		case 'u': 
+		case 'i': 
+		case 'o': 
+			echo $letter . " is a vowel";
+			break;
+		case 'q': 
+		case 'w': 
+		case 'r': 
+		case 't': 
+		case 'y': 
+		case 'p': 
+		case 's': 
+		case 'd': 
+		case 'f': 
+		case 'g': 
+		case 'k': 
+		case 'l': 
+		case 'z': 
+		case 'x': 
+		case 'c': 
+		case 'v': 
+		case 'b': 
+		case 'n': 
+		case 'm': 
+			echo $letter . " is a consonant";
+			break;
+		default:
+			echo $letter . " is not a vowel or a consonant";
+	}
 
 }
 
@@ -80,14 +106,18 @@ function oddOrEven($number)
 	// Use the modulus and ternary operator to echo whether the number is odd or even
 	if($number%2 == 0)
 		echo "even";
-	else 
+	else
 		echo "odd";
 }
 
 function countByThree()
 {
 	// Create a for loop that counts by threes to ninety-nine and outputs every increment from 3 up to and including ninety-nine
-
+	for($i = 0; $i < 100; $i = $i + 3)
+	{
+		echo $i;
+		echo "<br>";
+	}
 }
 
 /**
@@ -96,10 +126,25 @@ function countByThree()
 function indefiniteFactorialLoop($count)
 {
 	// write a loop that starts at 0 and calculates the factorial to to and including the value of count
-
+	$factorial_product = 1;
+	for($i = 1; $i < $count; $i++){
+		$factorial_product = $factorial_product  * $i;
+	}
 	echo "The factorial is " . $factorial_product;
 
 }
 
 // Insert function calls below.
 tempWarning(100);
+echo "<br>";
+quadraticEquation(1, 2, 1);
+echo "<br>";
+consinantOrVowel('d');
+echo "<br>";
+oddOrEven(10);
+echo "<br>";
+countByThree();
+echo "<br>";
+indefiniteFactorialLoop(10);
+
+

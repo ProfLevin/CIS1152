@@ -48,7 +48,7 @@ function dodecahedronVolume($area)
  */
 function impactVelocity($height)
 {
-	echo pow((2* 9.8 * $GRAVITY), .5);
+	echo pow((2* 9.8 * GRAVITY), .5);
 }
 
 truncateFloat(100.32423);
