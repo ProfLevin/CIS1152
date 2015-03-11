@@ -1,5 +1,5 @@
 git pull
-git add .
+git add -A
 git commit -m "Update on $DATE"
 git fetch upstream
 git checkout master
