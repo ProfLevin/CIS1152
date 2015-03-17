@@ -6,7 +6,7 @@
  * This lab focuses on your understanding of arithmatic.
  *
  * @version 1.0
- * @author YOUR_NAME <YOUR_EMAIL_ADDRESS@vtc.edu>
+ * @author George Colgrove IV <gwc02050@vtc.vsc.edu>
  * @since 20150120
  */
 
