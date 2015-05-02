@@ -6,7 +6,7 @@
  * This lab focuses on your understanding of arithmatic.
  *
  * @version 1.0
- * @author YOUR_NAME <YOUR_EMAIL_ADDRESS@vtc.edu>
+ * @author George Colgrove IV <gwc02050@vtc.vsc.edu>
  * @since 20150120
  */
 
@@ -23,11 +23,10 @@ namespace VTC\Lab_5\MathFun;
 
 class MathFun
 {
-
     const GRAVITY = 9.8;
 
 
-    function truncateFloat($float_value)
+    static function truncateFloat($float_value)
     {
         return (int) floatval($float_value * 100) / 100;
     }
@@ -35,7 +34,7 @@ class MathFun
     /**
      * @param $degrees_f
      */
-    function farenheit2Kelvin($degrees_f)
+    static function farenheit2Kelvin($degrees_f)
     {
         return ($degrees_f - 32) * 5 / 9 + 273.15;
     }
@@ -43,7 +42,7 @@ class MathFun
     /**
      * @param $area
      */
-    function dodecahedronVolume($area)
+    static function dodecahedronVolume($area)
     {
         return pow($area, 3) / 4 * (15 + 7 * sqrt(5));
     }
@@ -51,8 +50,8 @@ class MathFun
     /**
      * @param $height
      */
-    function impactVelocity($height)
+    static function impactVelocity($height)
     {
-        return sqrt(2 * GRAVITY * $height);
+        return sqrt(2 * self::GRAVITY * $height);
     }
 }
